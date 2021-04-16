@@ -1,0 +1,1 @@
+{"version":3,"sources":["style.css"],"names":[],"mappings":"AAAA,OACI,YACF,CAEA,SACE,QACF","file":"style.2244fb57.css","sourceRoot":"..","sourcesContent":[".ligne {\n    display: flex;\n  }\n  \n  .colonne {\n    flex: 40%;\n  }"]}
