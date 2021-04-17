@@ -1,7 +1,17 @@
+.page {
+  margin: 15px;
+}
+
 .ligne {
-    display: flex;
-  }
-  
-  .colonne {
-    flex: 40%;
-  }
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.colonne {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}

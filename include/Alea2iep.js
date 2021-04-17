@@ -38,8 +38,8 @@ export default function Alea2iep () {
   this.xMax = 0
   this.yMax = 0
 
-  this.taille = function (width, height) {
-    this.liste_script.push(`<viewBox width="${width}" height="${height}" />`)
+  this.reacdreViewBox = function (xmin, ymin, xmax, ymax) {
+    this.liste_script.push(`<viewBox x ="${xmin * 30}" y="${ymin * -30}" width="${(xmax - xmin) * 30}" height="${(ymax - ymin)*30}" />`)
   }
   // Transforme les coordonnées MathALEA2D en coordonnées pour le XML d'IEP
   this.x = function (A) {

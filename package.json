@@ -2,7 +2,7 @@
   "name": "aleaiep",
   "version": "1.0.0",
   "description": "Pseudo-langage pour générer une animation InstrumEnPoche",
-  "main": "src/index.js",
+  "main": "src/index.html",
   "devDependencies": {
     "parcel": "*",
     "posthtml-include": "^1.7.0"
@@ -16,7 +16,6 @@
   "license": "AGPL-3.0-or-later",
   "dependencies": {
     "algebrite": "^1.3.1",
-    "bootstrap": "^5.0.0-beta3",
     "codemirror": "^5.60.0",
     "Instrumenpoche": "git+https://framagit.org/Sesamath/instrumenpoche.git",
     "sval": "^0.4.8"

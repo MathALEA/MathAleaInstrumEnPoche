@@ -1,6 +1,4 @@
-/* global $ */
-
-import iepLoadPromise from 'instrumenpoche'
+import iepLoadPromise from 'Instrumenpoche'
 import CodeMirror from 'codemirror'
 import 'codemirror/lib/codemirror.css'
 import 'codemirror/theme/monokai.css'
@@ -20,9 +18,6 @@ import globals from './include/globals.js'
 globals()
 window.anim = new Alea2iep()
 
-const divSvg = document.getElementById('svg')
-const divSortieSvg = document.getElementById('sortieSvg')
-const divXmlIep = document.getElementById('xmlSrc')
 const buttonSubmit = document.getElementById('submit')
 let buttonTelecharger
 let buttonURL
@@ -252,10 +247,14 @@ buttonSubmit.onclick = function () {
   window.mathalea.objets2D = []
   interpreter.run(myCodeMirror.getValue())
   interpreter.run('exports.anim = anim')
-  // divXmlIep.value = window.IEP.script();
   xml = window.anim.script()
   iepLoadPromise(container, xml, { autostart: true }).then(iepApp => {
     // la figure est chargée
+    document.querySelectorAll('svg.svgIep').forEach(svg => {
+      const iepDoc = svg.iepDoc
+      // Décaler de 1 cm à droite
+      //iepDoc.setViewBox({ x: 30, y: 0, width: 800, height: 600 })
+    })
   }).catch(error => {
     // il y a eu un pb
     console.log(error)
